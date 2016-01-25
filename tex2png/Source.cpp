@@ -101,7 +101,7 @@ int main(int argc, char*argv[]) {
 		return 0;
 	}
 	
-	if(memcmp(data,TEXHDR_SIGNATURE,sizeof(TEXHDR_SIGNATURE))==0){
+	if(strncmp((const char *)data, "Texture", 7) == 0){
 		if(data[sizeof(TEXHDR) + 0] == 0x81 && data[sizeof(TEXHDR) + 1] == 0x01 && data[sizeof(TEXHDR) + 2] == 0x40 && data[sizeof(TEXHDR) + 3] == 0x00) {
 			export_png((TEXIMG*)&data[sizeof(TEXHDR)], argv[1]);
 		}
