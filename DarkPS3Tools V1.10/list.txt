@@ -1,4 +1,0 @@
-data\t205c.sdat
-data\Event.sdat
-data\Event.sdat
-data\Event.sdat
